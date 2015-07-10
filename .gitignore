@@ -1,1 +1,4 @@
-settings.py
+.DS_Store
+isvat/settings.py
+*.pyc
+*.old
