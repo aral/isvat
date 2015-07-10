@@ -12,7 +12,10 @@
 <body>
 	<h1>European VAT Number Validation API</h1>
 	<p>This service exists to help developers validate EU VAT numbers via a simple REST-based API. See the <a href="#details">service details</a> section for more information and disclaimers.</p>
+	<p>If you want to run this service on your own machine, <a href='https://github.com/aral/isvat'>grab the source code</a> (MIT-licensed).</p>
+	
 	<h2>Examples:</h2>
+	
 	<ol>
 		<li><a href="/GB/802311782/">http://isvat.appspot.com/GB/802311782/</a></li>
 		<li>(<a href="http://jquery.com/" title="jQuery: The Write Less, Do More, JavaScript Library">JQuery</a>) <code>$.getJSON('http://isvat.appspot.com/GB/802311782/?callback=?', function(data){alert(data)});</code></li>
@@ -34,17 +37,19 @@
 	<h2>Key:</h2>
 	<dl>
 		<dt>xx</dt>
-		<dd>ISO 3166 Alpha-2 two-letter country code of a European Union country (e.g., UK for United Kingdom)</dd>
+		<dd><a href='https://en.wikipedia.org/wiki/ISO_3166-2'>ISO 3166 Alpha-2 two-letter country code</a> of a European Union country (e.g., UK for United Kingdom)</dd>
 		<dt>nnn...</dt>
 		<dd>VAT number to check <em>without</em> the ISO country code. </dd>
 	</dl>
+	<!-- 
 	<h2>ISO 3166 EU Country Codes</h2>
 	<pre>european_union_countries = ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK']</pre>
 	<p>For a full and up-to-date list of ISO 3166 Alpha-2 codes, see <a href="http://opencountrycodes.appspot.com/" title="ISO 3166-1 country names and corresponding ISO 3166-1-alpha-2 codes">OpenCountryCodes</a>.</p>
+	-->
 	<h2 id="details">Service details and disclaimers</h2>
 	<p>This service gets its data from the <a href="http://ec.europa.eu/taxation_customs/vies/vieshome.do" title="EUROPA site - Validation">VIES VAT number validation system</a> provided by the European Commission. This site is in no way affiliated with or endorsed by the European Commission. See the <a href="http://ec.europa.eu/taxation_customs/vies/viesdisc.do" title="EUROPA site - Validation">VIES disclaimer</a> and <a href="http://ec.europa.eu/taxation_customs/vies/faqvies.do" title="EUROPA site - Validation">VIES FAQ</a> for further information on the data source and its terms of usage from the European Commission.</p>
 	<p>Read the <a href="/terms">terms of service</a> and our <a href="/privacy">privacy policy</a>.</p>
-	<p>This is an open initiative of the <a href="http://singularity08.com/" title="Singularity Conference">Singularity web conference</a>. Written by <a href="http://aralbalkan.com">Aral Balkan</a>. Copyright &copy; 2008, Yeah, Let's Do It! Limited.</p>
+	<p>isvat is a standard Django app and it is open source. Written by <a href="http://aralbalkan.com">Aral Balkan</a>. Copyright &copy; 2008-2015 Aral Balkan. Copyright &copy; 2008-2015 Naklab Ltd.</p>
 	<!-- Google analytics -->
 	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 	</script>
